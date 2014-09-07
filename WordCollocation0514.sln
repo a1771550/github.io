@@ -1,0 +1,87 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL_wc\DAL.csproj", "{FEE9B7B1-381C-4964-867D-E34ABD796668}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleUI", "ConsoleUI_wc\ConsoleUI.csproj", "{E2BF2E73-D0E1-4D27-941F-2248DA99CC8C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL_wc\BLL.csproj", "{0A221490-BBFB-4536-8D6B-70E966F796E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcResources", "Resources_wc\WcResources.csproj", "{9B149786-0D0C-49D6-AB32-15FCEF677E70}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{717177A8-3726-4594-9D6B-FD0CE177130D}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI", "UI_wc\UI.csproj", "{679543B1-D7C0-4AD7-8ACF-09A1551FB4D6}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WiseWordTemplate", "http://localhost:3374", "{A88E7E07-73EA-42BA-B955-6B964AE4592F}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_3374"
+		Debug.AspNetCompiler.PhysicalPath = "..\WiseWordTemplate\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_3374\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_3374"
+		Release.AspNetCompiler.PhysicalPath = "..\WiseWordTemplate\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_3374\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "..\WiseWordTemplate\"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jQueryDemo", "jQueryDemo\jQueryDemo.csproj", "{8D8CFBF4-2859-4994-9700-F278212F6BB7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FEE9B7B1-381C-4964-867D-E34ABD796668}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEE9B7B1-381C-4964-867D-E34ABD796668}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEE9B7B1-381C-4964-867D-E34ABD796668}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEE9B7B1-381C-4964-867D-E34ABD796668}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2BF2E73-D0E1-4D27-941F-2248DA99CC8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2BF2E73-D0E1-4D27-941F-2248DA99CC8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2BF2E73-D0E1-4D27-941F-2248DA99CC8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2BF2E73-D0E1-4D27-941F-2248DA99CC8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A221490-BBFB-4536-8D6B-70E966F796E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A221490-BBFB-4536-8D6B-70E966F796E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A221490-BBFB-4536-8D6B-70E966F796E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A221490-BBFB-4536-8D6B-70E966F796E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B149786-0D0C-49D6-AB32-15FCEF677E70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B149786-0D0C-49D6-AB32-15FCEF677E70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B149786-0D0C-49D6-AB32-15FCEF677E70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B149786-0D0C-49D6-AB32-15FCEF677E70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{679543B1-D7C0-4AD7-8ACF-09A1551FB4D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{679543B1-D7C0-4AD7-8ACF-09A1551FB4D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{679543B1-D7C0-4AD7-8ACF-09A1551FB4D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{679543B1-D7C0-4AD7-8ACF-09A1551FB4D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A88E7E07-73EA-42BA-B955-6B964AE4592F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A88E7E07-73EA-42BA-B955-6B964AE4592F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A88E7E07-73EA-42BA-B955-6B964AE4592F}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{A88E7E07-73EA-42BA-B955-6B964AE4592F}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{8D8CFBF4-2859-4994-9700-F278212F6BB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D8CFBF4-2859-4994-9700-F278212F6BB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D8CFBF4-2859-4994-9700-F278212F6BB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D8CFBF4-2859-4994-9700-F278212F6BB7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		VisualSVNWorkingCopyRoot = .
+	EndGlobalSection
+EndGlobal
