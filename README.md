@@ -1,2 +1,3 @@
-github.io
+WordCollocation Source Code
 =========
+Kevin Lau
