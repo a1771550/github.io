@@ -1,0 +1,65 @@
+﻿@model BLL.Pos
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Admin/_AdminLayout.cshtml";
+}
+
+<h2>Create</h2>
+
+@if (ViewBag.ErrorMessage != null && ViewBag.InnerException != null)
+{
+	<div class="container">
+		<p class="danger">ErrorMessage: @ViewBag.ErrorMessage</p>
+		<p class="danger">InnerMessage: @ViewBag.InnerException</p>
+	</div>
+}
+
+
+@using (Html.BeginForm("Create","ManagePos", FormMethod.Post,new { @class = "contact-form" })) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="container">
+        <h4>Pos</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.Entry, htmlAttributes: new { @class = "" })
+            <div class="">
+                @Html.EditorFor(model => model.Entry, new { htmlAttributes = new { @class = "" } })
+                @Html.ValidationMessageFor(model => model.Entry, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.EntryChi, htmlAttributes: new { @class = "" })
+            <div class="">
+                @Html.EditorFor(model => model.EntryChi, new { htmlAttributes = new { @class = "" } })
+                @Html.ValidationMessageFor(model => model.EntryChi, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.EntryJap, htmlAttributes: new { @class = "" })
+            <div class="">
+                @Html.EditorFor(model => model.EntryJap, new { htmlAttributes = new { @class = "" } })
+                @Html.ValidationMessageFor(model => model.EntryJap, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class=" ">
+	            <button type="submit">Crate</button>
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

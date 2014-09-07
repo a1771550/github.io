@@ -1,0 +1,75 @@
+﻿@model UI.Models.Contact
+
+@{
+	ViewBag.Title = Resources.Contact;
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h1>@Resources.Contact</h1>
+
+
+<p class="lead">@Resources.ContactParagraph</p>
+
+@*<h3>@Resources.Message</h3>*@
+
+@if (!string.IsNullOrEmpty(ViewBag.MessageOK))
+{
+	<p class="successText">@ViewBag.MessageOK</p>
+}
+
+@using (Html.BeginForm("Index", "Contact", FormMethod.Post, new { @class = "contact-form" }))
+{
+	@Html.AntiForgeryToken()
+
+	<div>
+		<hr />
+		@Html.ValidationSummary()
+
+		<fieldset class="who">
+			<div class="form-group">
+				@Html.LabelFor(model => model.Username)
+				<div>
+					@Html.EditorFor(model => model.Username,new{@class="text"})
+					@*@Html.ValidationMessageFor(model => model.Username)*@
+				</div>
+			</div>
+			@*<label for="Name">@Resources.Username</label>
+			<input id="Name" class="text" name="Name" type="text" value="">*@
+			
+			<div class="form-group">
+				@Html.LabelFor(model => model.Email)
+				<div>
+					@Html.EditorFor(model => model.Email,new{@class="text"})
+					@*@Html.ValidationMessageFor(model => model.Email)*@
+				</div>
+			</div>
+			@*<label for="Email">@Resources.Email</label>
+			<input id="Email" class="text" name="Email" type="text" value="">*@
+		</fieldset>
+
+		<fieldset class="what">
+			<div class="form-group">
+				@Html.LabelFor(model => model.Message)
+				<div>
+					@Html.TextAreaFor(model => model.Message, new{rows="10",cols="30"})
+					@*@Html.ValidationMessageFor(model => model.Message)*@
+				</div>
+			</div>
+			@*<label for="message-text">@Resources.Message</label>
+			<textarea id="message-text" rows="10" cols="30" name="MessageText"></textarea>*@
+			<button type="submit">@Resources.Send</button>
+		</fieldset>
+	</div>
+	@*@section Scripts {
+		@Scripts.Render("~/bundles/jqueryval")
+		<script type="text/javascript">
+			(function ($) {
+				$("input[type = 'radio']").click(function () {
+					$(this).parents("form").submit(); // post form
+				});
+
+			})(jQuery);
+		</script>
+	}*@
+}
