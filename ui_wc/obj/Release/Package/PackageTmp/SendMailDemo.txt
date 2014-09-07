@@ -1,0 +1,35 @@
+﻿using System;
+using System.Net;
+using System.Net.Mail;
+
+namespace View
+{
+	public partial class SendMailDemo : System.Web.UI.Page
+	{
+		protected void Page_Load(object sender, EventArgs e)
+		{
+			try
+			{
+				SmtpClient SmtpServer = new SmtpClient
+					{
+						Credentials = new NetworkCredential("admin@translationhall.com", "F3No200PakLongTsuen"),
+						Port = 8889,
+						Host = "mail.translationhall.com"
+					};
+				MailMessage mail = new MailMessage {From = new MailAddress("admin@translationhall.com")};
+				mail.To.Add("a1771550@gmail.com");
+				mail.Subject = "Email Test";
+				const string body = "Email Test Body";
+				mail.Body = body;
+				SmtpServer.Send(mail);
+
+				lblResult.Text = "OK!";
+			}
+			catch (SmtpException ex)
+			{
+				lblResult.Text = ex.Message + "<br>" + ex.InnerException;
+			}
+			
+		}
+	}
+}
